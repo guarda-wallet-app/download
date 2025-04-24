@@ -1,0 +1,137 @@
+/* Cookie Banner Styles */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-100);
+  padding: var(--space-6);
+  z-index: 1000;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cookie-banner.hidden {
+  display: none;
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cookie-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.cookie-text a {
+  color: var(--color-primary-300);
+  text-decoration: none;
+}
+
+.cookie-text a:hover {
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.cookie-button {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cookie-accept {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+.cookie-accept:hover {
+  background-color: var(--color-primary-600);
+}
+
+.cookie-reject {
+  background-color: var(--color-gray-700);
+  color: white;
+}
+
+.cookie-reject:hover {
+  background-color: var(--color-gray-600);
+}
+
+.cookie-customize {
+  background-color: transparent;
+  border: 1px solid var(--color-gray-600);
+  color: var(--color-gray-300);
+}
+
+.cookie-customize:hover {
+  background-color: var(--color-gray-800);
+}
+
+.cookie-preferences {
+  background-color: var(--color-gray-900);
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-700);
+}
+
+.cookie-preferences.hidden {
+  display: none;
+}
+
+.cookie-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.cookie-option:last-child {
+  margin-bottom: 0;
+}
+
+.cookie-option label {
+  font-size: 0.875rem;
+  color: var(--color-gray-300);
+  user-select: none;
+}
+
+.cookie-option input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.cookie-option input[type="checkbox"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .cookie-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cookie-text {
+    flex: 1;
+    margin-right: var(--space-4);
+  }
+
+  .cookie-buttons {
+    flex-shrink: 0;
+  }
+}
